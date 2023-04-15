@@ -142,8 +142,9 @@ contains
         do i=1,num_moss
             filename = './Output/output'
             write(filename, trim(format_string)) TRIM(filename), i,".txt"
-            open(unit=i,file=filename,position='append')
+            open(unit=i+10,file=filename,position='append')
         end do
+
 	end subroutine open_output_files
 
 	subroutine close_output_files(num_moss)
@@ -154,7 +155,7 @@ contains
 		integer :: i
 		
 		do i=1,num_moss
-            close(i)
+            close(i+10)
         end do
 	end subroutine close_output_files
 

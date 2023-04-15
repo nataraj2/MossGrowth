@@ -18,8 +18,12 @@ contains
 
 		call open_output_files(num_moss)
 
-		! Advance the solution
-	
+		write(*,*)"Moss growth vs time"
+		do i=1, num_moss
+            write(i+10,*)iter, moss(i)%B
+        end do	
+
+		write(*,'(I3,12(F15.10))')0,(moss(i)%get_mass(),i=1,num_moss)
 		do iter = 1, num_iterations
         	do i=1, num_moss
             	moss(i)%B = moss(i)%B + moss(i)%moss_productivity(LAI_forest)
@@ -27,10 +31,11 @@ contains
 
 			if(mod(iter,freq_output).eq.0)then
         		do i=1, num_moss
-            		write(i,*)iter, moss(i)%B
+            		write(i+10,*)iter, moss(i)%B
        			end do
 			end if
-    	end do
+			write(*,'(I3,12(F15.10))')iter,(moss(i)%get_mass(),i=1,num_moss)
+		end do
 
 		call close_output_files(num_moss)
 		

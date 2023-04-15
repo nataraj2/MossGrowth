@@ -18,7 +18,7 @@ program main
 	!call compute_LAI_forest
 	LAI_forest = 0.01 ! Just for testing
 
-	num_iterations = 2
+	num_iterations = 20
 	freq_output = 1
 
 	call advance_timestep(num_moss, moss, LAI_forest, num_iterations, freq_output)
