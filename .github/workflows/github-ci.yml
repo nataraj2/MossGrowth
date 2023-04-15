@@ -31,7 +31,7 @@ jobs:
        cd Exec
        make
        ls
-    - name: Run C++ program with serial/parallel executable
+    - name: Run MossGrowth program with serial executable
       run: |
         cd Exec
         if [ "${{ matrix.compiler }}" = "serial" ]; then
