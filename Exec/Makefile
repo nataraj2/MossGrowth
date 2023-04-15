@@ -1,5 +1,5 @@
 # Compiler flags
-FC = mpif90
+FC = gfortran
 FCFLAGS = -O2
 
 # Directories
