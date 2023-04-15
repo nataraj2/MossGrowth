@@ -1,17 +1,15 @@
 program main
 
+	use module_global
+	use module_initialize
 	use module_timestep
 
 	implicit none
 
-	integer :: num_moss, num_iterations, freq_output
-    type(moss_type), allocatable :: moss(:)
-
 	double precision :: LAI_forest !Just for testing. Computed elsewhere in code
-		
-	num_moss = read_number_of_moss_types("inputs.inp");
-    allocate(moss(num_moss))	
 
+	call initialize
+	
 	call read_inputs("inputs.inp", moss, num_moss)
 
 	call output_initialization(moss, num_moss)

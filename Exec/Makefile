@@ -8,7 +8,7 @@ MOD_DIR = mod
 SRC_DIR=../Source
 
 # List of source files
-SRC_FILES = $(addprefix $(SRC_DIR)/, module_moss.f90 module_io.f90 module_timestep.f90 main.f90)
+SRC_FILES = $(addprefix $(SRC_DIR)/, module_moss.f90 module_global.f90 module_io.f90 module_initialize.f90 module_timestep.f90 main.f90)
 
 # List of object files
 OBJ_FILES = $(addprefix $(MOD_DIR)/, $(notdir $(SRC_FILES:.f90=.o)))
