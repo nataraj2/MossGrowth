@@ -10,7 +10,7 @@ contains
 		implicit none
 
 		integer, intent(in) :: num_moss
-		class(moss_type), intent(inout) :: moss(num_moss)
+		type(moss_type), intent(inout) :: moss(num_moss)
 		double precision, intent(in) :: LAI_forest
 		integer, intent(in):: num_iterations, freq_output
 
