@@ -33,7 +33,7 @@ jobs:
        ls
     - name: Run C++ program with serial/parallel executable
       run: |
-        cd CPUAndGPU
+        cd Exec
         if [ "${{ matrix.compiler }}" = "serial" ]; then
           ./moss_growth.ex
         else
