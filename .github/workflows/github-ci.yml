@@ -26,7 +26,7 @@ jobs:
         else
           sudo apt-get install g++-9
         fi
-    - name: Compile 3D
+    - name: Compile MossGrowth
       run: |
        cd Exec
        make
