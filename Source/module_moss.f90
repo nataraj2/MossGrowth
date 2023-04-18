@@ -116,7 +116,7 @@ contains
 		! f_light = exp(-0.7*(LAI_forest+LAI_moss)-l_comp))/(l_sat-l_comp)
 
 		LAI_moss = this%B*this%S_l
-		f_light = (exp(-0.7*(LAI_forest+LAI_moss)-this%l_comp))/(this%l_sat-this%l_comp)
+		f_light = (exp(-0.7*(LAI_forest+LAI_moss))-this%l_comp)/(this%l_sat-this%l_comp)
 		P = this%S_l*this%A_max*f_light*this%B - this%B*this%q
 	end function moss_productivity 
 		
