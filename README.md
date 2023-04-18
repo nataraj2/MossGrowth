@@ -16,7 +16,7 @@ where $S_l$ is the moss specific leaf area, $A_{max}$ is the moss maximum produc
 $f_{light}$ is a growth response factor, and $q$ is a respiration and turnover parameter. 
 $f_{light}$ is calculated as 
 
-$f_{light} = \frac{exp(-0.7(LAI_{forest}+LAI_{moss})-l_{comp})}{l_{sat}-l_{comp}}$  
+$f_{light} = \frac{exp(-0.7(LAI_{forest}+LAI_{moss}))-l_{comp}}{l_{sat}-l_{comp}}$  
 
 where $LAI_{forest}$ is the leaf area index of the forest, $LAI_{moss} = B\times S_l$ 
 is the leaf area index of the moss, $l_{sat}$ is the light saturations point, and 
