@@ -5,7 +5,7 @@ Moss grows according to the equation
 
 $B(t) = B(t-1) + P(t)$
 
-where $B(t)$ is the moss biomass (kgC) at time step `$t$, $B(t-1)$ is the biomass 
+where $B(t)$ is the moss biomass (kgC) at time step $t$, $B(t-1)$ is the biomass 
 at the previous time step, and $P(t)$ is the moss productivity at the time step $t$
 
 Moss productivity is calculated as 
