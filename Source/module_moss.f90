@@ -113,7 +113,7 @@ contains
 		double precision, intent(in) :: LAI_forest
 		double precision :: LAI_moss, f_light, P
 		
-		! f_light = exp(-0.7*(LAI_forest+LAI_moss)-l_comp))/(l_sat-l_comp)
+		! f_light = exp(-0.7*(LAI_forest+LAI_moss))-l_comp)/(l_sat-l_comp)
 
 		LAI_moss = this%B*this%S_l
 		f_light = (exp(-0.7*(LAI_forest+LAI_moss))-this%l_comp)/(this%l_sat-this%l_comp)
